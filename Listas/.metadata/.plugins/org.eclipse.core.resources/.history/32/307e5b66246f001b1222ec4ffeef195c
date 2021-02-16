@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_9 {
+
+	public static void main(String[] args) {
+		int soma = 300;
+		JOptionPane.showMessageDialog(null, "A soma de todos os números ímpares de 1 a 300 é igual a " + somaImpares(soma));
+	}
+
+	private static int somaImpares(int num) {
+		if (num == 1)
+			return 1;
+		if (num % 2 == 0)
+			return somaImpares(num - 1);
+		
+		return num + somaImpares(num - 2);
+	}
+
+}

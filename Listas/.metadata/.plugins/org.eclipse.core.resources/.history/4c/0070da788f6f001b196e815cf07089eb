@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_1 {
+
+	public static void main(String [] args) {
+		
+		int m [][] = new int [4][4];
+		
+		for(int i=0; i<4; i ++) {
+			for(int j=0; j<4; j++) {
+				
+				if(i==j) {
+					m[i][j]= (int)Math.pow(3, i);
+				}else if(i!=j) {
+					m[i][j]=Integer.parseInt(JOptionPane.showInputDialog("Digite"));
+				}
+				
+			}
+		}
+		
+		String visuMatriz = "";
+		for(int i=0; i<4; i ++) {
+			for(int j=0; j<4; j++) {
+				visuMatriz += m[i][j]+"      "; 
+			}
+			visuMatriz+="\n";
+		}
+		
+		JOptionPane.showMessageDialog(null, visuMatriz);
+		
+	}
+}

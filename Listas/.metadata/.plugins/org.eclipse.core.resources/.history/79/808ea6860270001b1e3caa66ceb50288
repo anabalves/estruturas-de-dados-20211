@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_5 {
+
+	public static void main(String[] args) {
+		int matriz[][] = new int[4][4];
+
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
+				if (i == j) {
+					matriz[i][j] = (int) Math.pow(3, i);
+				} else if (i != j) {
+					matriz[i][j] = Integer.parseInt(JOptionPane.showInputDialog("Digite números inteiros positivos para vizualizar graficamente a matriz"));
+				}
+			}
+		}
+
+		String saida = ""; // Cria e inicializa uma String
+
+		for (int linha = 0; linha < matriz.length; linha++) { // for para percorrer as linhas da matriz
+			for (int coluna = 0; coluna < matriz[0].length; coluna++) { // percorrer as colunas
+				// guardando na String cada elemento separado por um espaço
+				saida = saida + matriz[linha][coluna] + " ";
+			}
+			saida = saida + "\n"; // Guarda uma quebra de linha na String
+
+		}
+
+		System.out.println(saida);
+
+	}
+}

@@ -1,0 +1,9 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_10 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

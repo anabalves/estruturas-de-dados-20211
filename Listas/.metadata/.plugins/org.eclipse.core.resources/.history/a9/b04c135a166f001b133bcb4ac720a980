@@ -1,0 +1,18 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_7 {
+
+	public static void main(String[] args) {
+		int num = 1;;
+		JOptionPane.showMessageDialog(null, "A soma de todos os números de 1 a 100 é igual a" + somatoria(num));
+	}
+	
+	private static int somatoria(int n) {
+		int soma;
+		if (n == 100)
+			return 100;
+		else
+			return soma = somatoria(n + 1) + n;
+	}
+
+}

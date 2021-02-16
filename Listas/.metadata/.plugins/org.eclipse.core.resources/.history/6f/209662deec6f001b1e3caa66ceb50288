@@ -1,0 +1,34 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_2 {
+
+	public static void main(String[] args) {
+		int[] valores = new int[5];
+		int[] valoresFatorial = new int[5];
+
+		for (int i = 0; i < 5; i++) {
+			valores[i] = Integer.parseInt(JOptionPane.showInputDialog("digite"));
+		}
+
+		for (int i = 0; i < 5; i++) {
+			valoresFatorial[i] = calculaFatorial(valores[i]);
+		}
+
+		for (int i = 0; i < 5; i++) {
+			JOptionPane.showMessageDialog(null,
+					"O fatorial do número " + valores[i] + " é igual a: " + valoresFatorial[i]);
+		}
+
+	}
+
+	public static int calculaFatorial(int num) {
+		int fat = 1;
+		int i = 1;
+		while (i > num) {
+			fat = fat * (i - 1);
+			i--;
+		}
+		return fat;
+	}
+
+}

@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+public class Exercicio_L1_11 {
+
+    public static void main(String[] args) {
+        double inicial = 0;
+        int limite = Integer.parseInt(JOptionPane.showInputDialog("Digite um número inteiro positivo para calcular a série"));
+        double resultado = inicial + CalcularProgressao(limite);
+        System.out.println(resultado);
+    }
+
+    public static double CalcularProgressao(int limite) {
+        if (limite == 1) {
+            return 1.0;
+        }
+        else {
+            return 1.0/limite + CalcularProgressao(limite-1);
+        }
+    }
+
+}

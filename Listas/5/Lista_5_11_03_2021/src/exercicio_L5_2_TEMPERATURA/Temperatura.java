@@ -1,9 +1,9 @@
 package exercicio_L5_2_TEMPERATURA;
 
 public class Temperatura {
-	
+
 	private Temperatura proximo;
-	private double temperatura;	
+	private double temperatura;
 
 	public Temperatura getProximo() {
 		return proximo;
